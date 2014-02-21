@@ -54,6 +54,8 @@ public class calcImplement implements calcService
     {
         return (obj1 != obj2);
     }
-
     
+    public void errorMethod() throws NullPointerException
+    {
+    }
 }

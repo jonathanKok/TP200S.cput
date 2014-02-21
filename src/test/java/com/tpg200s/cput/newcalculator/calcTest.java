@@ -76,9 +76,7 @@ public class calcTest {
      public void testAssertTrue()
      {
          boolean a = true;
-         Assert.assertTrue(service.testTrue(a));
-         
-     
+         Assert.assertTrue(service.testTrue(a));    
      }
      
      @Test
@@ -88,11 +86,36 @@ public class calcTest {
          Assert.assertTrue(service.testFalse(a));
      }
      
+     @Test
+     public void testAssertMessageRight()
+     {
+         Assert.assertEquals(service.add(2, 3), 5, "That is correct!");
+     }
+     
+     @Test
+     public void testArrayEquals()
+     {
+         
+         String[] arrayColours1 = {"Red", "Blue", "Green"};
+         String[] arrayColours2 = {"Purple", "Blue", "Green"};
+         
+         Assert.assertNotEquals(arrayColours1,arrayColours2);
+     }
+     
+     @Test(expectedExceptions = NullPointerException.class)
+     public void errorMethodNull()
+     {
+         //Integer a = null;
+         
+         //Integer b = a * 5;
+		 service.errorMethod();
+     }
+     
      @Ignore
-     public void ignoreThis(){}
-     
-     
-     
+     public void ignoreThis()
+	 {	 
+	 }
+
          
     @BeforeClass
     public static void setUpClass() throws Exception 

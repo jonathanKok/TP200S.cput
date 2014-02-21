@@ -10,13 +10,15 @@ package com.tpg200s.cput.newcalculator.service;
  *
  * @author student
  */
-public interface calcService {
+public interface calcService
+{
     int add(int a, int b);
     double addDoubleVals(double a, double b);
     boolean isEquals(Integer a, Integer b);
     boolean isNotEquals(Integer a, Integer b);
     boolean testTrue(boolean a);
     boolean testFalse(boolean a);
+    void errorMethod();
     
-   // boolean isSame(); 
+    
 }
