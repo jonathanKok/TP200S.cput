@@ -18,7 +18,5 @@ public interface calcService
     boolean isNotEquals(Integer a, Integer b);
     boolean testTrue(boolean a);
     boolean testFalse(boolean a);
-    void errorMethod();
-    
     
 }

@@ -102,13 +102,10 @@ public class calcTest {
          Assert.assertNotEquals(arrayColours1,arrayColours2);
      }
      
-     @Test(expectedExceptions = NullPointerException.class)
-     public void errorMethodNull()
+     @Test(expectedExceptions = ArithmeticException.class)
+     public void errorMethodNull() throws ArithmeticException
      {
-         //Integer a = null;
-         
-         //Integer b = a * 5;
-		 service.errorMethod();
+          int testOne = 10/0; 
      }
      
      @Ignore
@@ -116,7 +113,6 @@ public class calcTest {
 	 {	 
 	 }
 
-         
     @BeforeClass
     public static void setUpClass() throws Exception 
     {
